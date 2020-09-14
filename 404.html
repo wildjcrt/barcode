@@ -21,8 +21,14 @@
   </head>
   <body>
     <div class="d-flex header"></div>
-    <div class="container">
-      <svg id="code128"></svg>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+          <svg id="code128"></svg>
+        </div>
+        <div class="col"></div>
+      </div>
     </div>
     <script>
       var bgColor = window.location.search.replace("?", '');
@@ -30,15 +36,14 @@
         $('body').css('background-color', `#${bgColor}`);
       }
 
-      code="aasdfghjklqwert"
       JsBarcode('#code128',
                 code,
                 {
                   height: 200,
                   width: 4,
                   fontSize: 80,
-                  marginLeft: 30,
-                  marginRight: 30
+                  marginLeft: 60,
+                  marginRight: 60
                 });
     </script>
   </body>
